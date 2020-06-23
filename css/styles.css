@@ -1,0 +1,233 @@
+:root {
+    --main-green: #1abb9c;
+    --main-gray: #e1e1e1;
+    --main-transition: 0.3s all linear;
+}
+
+@font-face {
+    font-family: "BYekan";
+    src: url("../vendor/byekan/BYekan.eot");
+    src: local("BYekan"), url("../vendor/byekan/BYekan.woff") format("woff"),
+        url("../vendor/byekan/BYekan.ttf") format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "BYekan", sans-serif;
+    transition: var(--main-transition);
+}
+
+body {
+    color: #737373;
+}
+
+.navbar {
+    padding: 1.5rem 5rem;
+}
+
+.navbar-brand {
+    margin-left: 1.5rem;
+}
+
+a:hover {
+    color: var(--main-green) !important;
+}
+
+.first {
+    height: 100vh;
+    background-color: #fff;
+}
+
+.second {}
+
+.qoute-box {}
+
+.qoutes {
+    padding-bottom: 2.5rem;
+}
+
+.qoute-content {
+    position: relative;
+    padding: 1px;
+    border: 1px solid var(--main-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+.qoute-content::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px solid var(--main-gray);
+    transition: var(--main-transition);
+}
+
+.qoute-content:hover,
+.qoute-content:hover::before {
+    border-color: var(--main-green);
+}
+
+.qoute-content h5 {
+    color: #616161;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.qoute-content p {
+    text-align: center;
+}
+
+.new-products,
+.others-section,
+.qarn,
+.footer-section {
+    text-align: center;
+    padding: 3.5rem 0;
+}
+
+.section-title {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    color: #646464;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title:before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    left: -100px;
+    top: 10px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.section-title:after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    right: -100px;
+    top: 10px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.product-image {
+    margin-bottom: 2rem;
+}
+
+.product-top {
+    margin: 1.5rem;
+}
+
+.product-title {
+    color: #646464;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.product-more {
+    cursor: pointer;
+    color: var(--main-green) !important;
+}
+
+.product-more:hover {
+    color: #3c3c3c !important;
+}
+
+.product-detail {
+    font-size: 0.9rem;
+}
+
+.others-section {
+    background-image: url("../images/parallax1.jpg");
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.others-section>.section-title {
+    color: #939393;
+}
+
+.others-author {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--main-green);
+}
+
+.footer-section {
+    background-color: #303030;
+    color: #cacaca;
+    text-align: right;
+}
+
+.footer-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.footer-content {
+    font-size: 0.8rem;
+}
+
+.blog-list {
+    list-style: none;
+}
+
+.blog-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 1rem 0;
+}
+
+.blog-link {
+    font-size: 0.85rem;
+    color: var(--main-gray);
+}
+
+.blog-link:hover {
+    text-decoration: none;
+}
+
+.blog-item-date {
+    font-size: 0.7rem;
+}
+
+.blog-item:not(:last-child)::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: 0;
+    border-bottom: 1px solid var(--main-gray);
+}
+
+.footer-action {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    text-align: center;
+    background-color: var(--main-green);
+    color: #fff;
+}
+
+.footer-action:hover {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #2d2d2d;
+}
