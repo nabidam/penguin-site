@@ -14,11 +14,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "BYekan", sans-serif;
     transition: var(--main-transition);
 }
 
 body {
+    font-family: "BYekan", sans-serif;
     color: #737373;
 }
 
@@ -123,6 +123,17 @@ a:hover {
 
 .product-image {
     margin-bottom: 2rem;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.product-image img:hover {
+    transform: scale(1.2);
+}
+
+.product-image img {
+    display: block;
+    transition: .3s ease-in-out;
 }
 
 .product-top {
@@ -228,6 +239,112 @@ a:hover {
     text-decoration: none;
 }
 
-.footer {
+.social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.social-link {
+    border: 1px solid #fff;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.rss-link {
+    color: #faaa5e;
+    border: 1px solid #faaa5e;
+}
+
+.rss-link:hover {
+    background-color: #faaa5e;
+    text-decoration: none;
+    color: #fff !important;
+}
+
+.fb-link {
+    color: #677fb5;
+    border: 1px solid #677fb5;
+}
+
+.fb-link:hover {
+    background-color: #677fb5;
+    text-decoration: none;
+    color: #fff !important;
+}
+
+.twitter-link {
+    color: #70c2e9;
+    border: 1px solid #70c2e9;
+}
+
+.twitter-link:hover {
+    background-color: #70c2e9;
+    text-decoration: none;
+    color: #fff !important;
+}
+
+.pinterest-link {
+    color: #d8545d;
+    border: 1px solid #d8545d;
+}
+
+.pinterest-link:hover {
+    background-color: #d8545d;
+    text-decoration: none;
+    color: #fff !important;
+}
+
+.linkedin-link {
+    color: #3daccf;
+    border: 1px solid #3daccf;
+}
+
+.linkedin-link:hover {
+    background-color: #3daccf;
+    text-decoration: none;
+    color: #fff !important;
+}
+
+footer {
     background-color: #2d2d2d;
+    text-align: right;
+    padding: 2rem 0 1rem 0;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #cacaca;
+}
+
+.footer-navbar {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.footer-navbar-item {
+    position: relative;
+    display: inline-block;
+}
+
+.footer-navbar-item a {
+    color: #cacaca !important;
+}
+
+.footer-navbar-item a:hover {
+    text-decoration: none;
+    color: var(--main-green) !important;
+}
+
+.footer-navbar-item:not(:last-child)::after {
+    position: absolute;
+    content: "|";
+    padding-right: 10px;
+
 }

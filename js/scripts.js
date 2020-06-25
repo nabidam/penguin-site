@@ -11,4 +11,6 @@ $(document).ready(function () {
     autoplay: true,
     rtl: true,
   });
+
+  $(".fancybox").fancybox();
 });
