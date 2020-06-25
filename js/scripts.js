@@ -2,11 +2,22 @@ $(document).ready(function () {
   $(".products-carousel").owlCarousel({
     margin: 20,
     rtl: true,
-    nav: true,
+    // nav: true,
     navText: [
       '<i class="fas fa-chevron-left"></i>',
       '<i class="fas fa-chevron-right"></i>',
     ],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 2,
+      },
+      1024: {
+        items: 3,
+      },
+    },
     pagination: false,
     rewindNav: false,
     items: 3,
