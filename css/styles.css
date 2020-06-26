@@ -555,3 +555,33 @@ footer p {
     z-index: 200;
     display: none;
 }
+
+@media only screen and (max-width: 1024px) {
+    .banners ul li {
+        height: 350px;
+    }
+
+    .banners ul li img {
+        height: 350px;
+    }
+
+    .banner-caption {
+        font-size: 0.7rem;
+        padding: 0.6rem 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .banners ul li {
+        height: 250px;
+    }
+
+    .banners ul li img {
+        height: 250px;
+    }
+
+    .banner-caption {
+        font-size: 0.6rem;
+        padding: 0.5rem 0.8rem;
+    }
+}

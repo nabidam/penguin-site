@@ -192,8 +192,8 @@ function showCaptions(self) {
   setTimeout(function () {
     self
       .css("position", "absolute")
-      .css("top", self.data("y"))
-      .css("left", self.data("x"))
+      .css("top", self.data("y") + "%")
+      .css("left", self.data("x") + "%")
       .fadeIn();
     // console.log(self);
   }, 2000);
