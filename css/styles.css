@@ -145,7 +145,9 @@ a:hover {
 .past-section,
 .current-section,
 .future-section,
-.details-section {
+.details-section,
+.services-section,
+.orders-section {
     text-align: center;
     padding: 3.5rem 0;
 }
@@ -422,7 +424,8 @@ footer p {
 
 .details-title {
     font-size: 1.2rem;
-    color: #1d1d1d font-weight: bold;
+    color: #1d1d1d;
+    font-weight: bold;
 }
 
 .accordion {
@@ -472,6 +475,91 @@ footer p {
     background-color: var(--main-green);
 }
 
+.services-section div {
+    text-align: right;
+}
+
+.services-section h5 {
+    font-size: 1rem;
+}
+
+.services-section p {
+    font-size: 0.8rem;
+}
+
+.services-section .fas {
+    font-size: 3rem;
+}
+
+.orders-section {
+    background-image: url("../images/parallax2.jpg");
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.orders-section>.section-title {
+    color: #939393;
+}
+
+.orders-steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.orders-step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 200px;
+}
+
+.orders-step:not(:last-child) {
+    margin-left: 2rem;
+}
+
+.orders-step:not(:last-child)::after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 50%;
+    top: 75px;
+    left: -70px;
+    border-bottom: 1px solid var(--main-gray);
+}
+
+.step-icon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--main-green);
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.step-icon:hover {
+    background-color: var(--main-green);
+    color: #fff;
+}
+
+.step-text {
+    font-size: 0.8rem;
+    font-weight: 100;
+    color: #cacaca
+}
+
 @media only screen and (max-width: 1024px) {
     .banners ul li {
         height: 350px;
@@ -499,5 +587,22 @@ footer p {
     .banner-caption {
         font-size: 0.6rem;
         padding: 0.5rem 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .orders-step:not(:last-child)::after {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .orders-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .orders-step:not(:last-child) {
+        margin-left: 0;
     }
 }
